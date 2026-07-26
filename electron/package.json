@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "Electron Desktop Client Wrapper untuk Signage Display - MJ Solution Indonesia",
   "main": "main.js",
+  "author": "M.Riki Hidayat",
   "scripts": {
     "start": "electron .",
     "start:windowed": "cross-env KIOSK_MODE=false electron .",
     "build": "electron-builder",
     "build:win": "electron-builder --win nsis"
   },
-  "dependencies": {
-    "electron": "^32.1.0"
-  },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "electron": "^32.1.0",
     "electron-builder": "^26.15.3"
   },
   "build": {
