@@ -23,10 +23,6 @@ function createDisplayWindow(deviceId, token) {
   const url = `${APP_BASE_URL}/display/${deviceId}?token=${token}`;
   win.loadURL(url);
 
-  if (!kiosk) {
-    win.webContents.openDevTools({ mode: 'detach' });
-  }
-
   win.webContents.on('did-fail-load', () => {
     setTimeout(() => {
       if (!win.isDestroyed()) win.loadURL(url);
