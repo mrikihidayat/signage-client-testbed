@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pairing Device</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: #0f172a;
+        color: #e2e8f0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      .wrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+        padding: 0 24px;
+      }
+      .label {
+        font-size: 18px;
+        color: #94a3b8;
+      }
+      .code {
+        font-size: 96px;
+        font-weight: 700;
+        letter-spacing: 18px;
+        color: #34d399;
+      }
+      .hint {
+        font-size: 15px;
+        color: #64748b;
+        max-width: 480px;
+        line-height: 1.6;
+      }
+      .error {
+        font-size: 16px;
+        color: #f87171;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="label">Kode Pairing Layar</div>
+      <div class="code" id="code">......</div>
+      <div class="hint">
+        Buka Dashboard Admin, masuk ke menu Pairing, lalu masukkan kode di atas untuk menghubungkan layar ini.
+      </div>
+      <div class="error" id="error"></div>
+    </div>
+    <script>
+      window.__setPairingCode = function (code) {
+        document.getElementById('code').textContent = code;
+      };
+      window.__setPairingError = function (message) {
+        document.getElementById('error').textContent = message;
+      };
+    </script>
+  </body>
+</html>
