@@ -24,7 +24,7 @@ Urutan yang disarankan: **Database → Server → Client → Electron**.
 
 ### 1. Database (Supabase)
 1. Buat project di [supabase.com](https://supabase.com).
-2. Buka **SQL Editor**, jalankan seluruh isi [`schema.sql`](schema.sql) — ini membuat semua tabel (`admins`, `devices`, `contents`, `playlist_items`, `pairing_codes`) sekaligus migrasi kolom-kolom terbaru (`mode`, `ws_token`, `paired`), jadi aman dijalankan berulang.
+2. Buka **SQL Editor**, jalankan seluruh isi [`schema.sql`](schema.sql) — ini membuat semua tabel (`admins`, `devices`, `contents`, `playlist_items`, `pairing_codes, `mode`, `ws_token`, `paired`)
 3. Catat **Project URL** dan **service_role key** dari *Project Settings → API*.
 
 ### 2. Server
